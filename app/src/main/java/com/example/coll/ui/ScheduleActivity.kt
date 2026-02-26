@@ -39,8 +39,7 @@ class ScheduleActivity : AppCompatActivity() {
     }
     
     private fun getRoomById(roomId: String): Room? {
-        // Здесь можно загрузить данные из базы данных или API
-        // Пока используем тестовые данные
+
         return RoomRepository.getRoomById(roomId)
     }
     

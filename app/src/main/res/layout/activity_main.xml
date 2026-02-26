@@ -37,9 +37,10 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:layout_marginBottom="16dp">
+                android:layout_marginBottom="8dp">
 
                 <TextView
+                    android:id="@+id/floorTitleText"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -55,6 +56,48 @@
                     android:textSize="12sp" />
 
             </LinearLayout>
+
+            <!-- Переключатель этажей: подвал, 1, 2, 3 -->
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/floorToggleGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:singleSelection="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFloorBasement"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Подвал" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFloor1"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="1 этаж" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFloor2"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="2 этаж" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFloor3"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="3 этаж" />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
 
             <com.example.coll.ui.SvgMapView
                 android:id="@+id/svgMapView"
